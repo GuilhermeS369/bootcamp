@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alice.bcamp.entities.Bcamp;
+import com.alice.bcamp.entities.Curso;
 
 @RestController
-@RequestMapping(value ="/bootcamp")
-public class BcampResource {
+@RequestMapping(value ="/curso")
+public class CursoResource {
 	
 	@GetMapping
-	public ResponseEntity<Bcamp> find(){
-		Bcamp bootcamp = new Bcamp("Spring","Um bootcamp do framework Spring",null,null);
-		return ResponseEntity.ok().body(bootcamp);
+	public ResponseEntity<Curso> find(){
+		Curso curso = new Curso("Curso Java","Descrição ficticia", 8);
+		return ResponseEntity.ok().body(curso);
 	}
 }

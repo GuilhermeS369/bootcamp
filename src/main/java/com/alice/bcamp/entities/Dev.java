@@ -36,9 +36,18 @@ public class Dev {
                 .mapToDouble(Conteudo::calcularXp)
                 .sum();*/
     }
+    
+    public Dev() {
+    	
+    }
+    public Dev(String nome, Set<Conteudo> conteudosInscritos, Set<Conteudo> conteudosConcluidos) {
+		super();
+		this.nome = nome;
+		this.conteudosInscritos = conteudosInscritos;
+		this.conteudosConcluidos = conteudosConcluidos;
+	}
 
-
-    public String getNome() {
+	public String getNome() {
         return nome;
     }
 
